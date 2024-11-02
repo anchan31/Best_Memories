@@ -58,9 +58,9 @@ body, html {
 }
 
 .memory-photo {
-    width: 200px; /* Fixed width */
-    height: 350px; /* Fixed height */
-    object-fit: cover; /* Maintain aspect ratio and cover the entire area */
+    width: 100%; /* Make the width 100% of the parent */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 200px; /* Limit max width for larger screens */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -98,8 +98,8 @@ body, html {
     }
 
     .memory-photo {
-        width: 150px;
-        height: 150px; /* Adjust height for smaller screens */
+        max-width: 90%; /* Make the image responsive */
+        height: auto; /* Maintain aspect ratio */
     }
 
     h2 {
@@ -114,8 +114,8 @@ body, html {
 
 @media (max-width: 480px) { /* Smallest screens */
     .memory-photo {
-        width: 120px;
-        height: 120px; /* Adjust height for the smallest screens */
+        max-width: 90%; /* Make the image responsive */
+        height: auto; /* Maintain aspect ratio */
     }
 
     h2 {
